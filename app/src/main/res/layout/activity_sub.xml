@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.matias.le2_matias.SubActivity"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/btn_loadShared"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Shared Preferences"
+        android:onClick="loadShared"/>
+
+    <Button
+        android:id="@+id/btn_loadInternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Internal Storage"
+        android:layout_below="@id/btn_loadShared"
+        android:onClick="loadInternal"/>
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_loadInternal"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_below="@id/tv_display"
+        android:layout_alignParentLeft="true"
+        android:onClick="clearAll"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_below="@id/tv_display"
+        android:layout_alignParentRight="true"
+        android:onClick="backActivity"/>
+
+</RelativeLayout>
